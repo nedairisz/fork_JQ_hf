@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {
+    font-size: 1.2em;
+    font-family: Cochin, Georgia, Times, "Times New Roman", serif;
+}
+p,
+ul,
+ol {
+    font-size: 1em;
+}
+li {
+    line-height: 16pt;
+    padding: 3pt;
+}
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+section {
+    border: 1px solid gray;
+    padding: 10pt;
+    margin: 10pt;
+}
+span {
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+p span {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+ol span,
+ul span {
+    font-family: "Courier New", Courier, monospace;
+}
+div {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.formazott {
+    border: 1px solid green;
+    padding: 10px;
+    background: gold;
+}
+img {
+    width: 100%;
+}
+
+div.tarolo {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+div.elem {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: lightslategray;
+}

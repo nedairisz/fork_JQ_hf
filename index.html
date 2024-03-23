@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery gyakorló</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
+    
+</head>
+
+<body>
+    <main>
+        <h1>JQuery gyakorló feladatok</h1>
+        <p>
+            Az alábbi feladatokat mind külön metódus hívásával valósítsd
+            meg!
+        </p>
+        <section>
+            <h2 id="f1">Elemek elérése 1</h2>
+            <p>
+                Írj JavaScript kódot, amely kiírja a konzolra az ehhez a
+                bekezdéshez tartozó címben lévő szöveget! (azaz az első
+                section h2-tagjében lévő szövget).
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>
+                    Az első section elem elérése:
+                    <span>const
+                        ELEM=document.querySelectorAll("section h2")[0]</span>
+                    <br />
+                    ld:
+                    <a href="https://www.w3schools.com/jsref/met_document_queryselectorall.asp">querySelectorAll</a>
+                </li>
+                <li>
+                    Elem tartalmának kiolvasása:
+                    <span>ELEM.innerHTML</span> ld.:
+                    <a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">innerHTML</a>
+                </li>
+                <li>Konzolra írás: <span>console.log()</span></li>
+            </ul>
+        </section>
+        <section>
+            <h2 id="f2">Elemek elérése 2</h2>
+            <p>
+                Írj JavaScript kódot, amely az "#ide" azonosítóval ellátott
+                elembe beletesz egy p taget, és a p tag tartalma "Jó
+                reggelt!"
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>
+                    Az első section elem elérése:
+                    <span>const ELEM=document.querySelectorAll("#ide")[0],
+                        vagy <br />
+                        const ELEM=document.getElementByID("ide")
+                    </span>
+                    ld.:
+                    <a href="https://www.w3schools.com/jsref/met_document_getelementbyid.asp">getElementByID</a><br />
+                </li>
+                <li>Elem tartalmába írás: <span>ELEM.innerHTML </span></li>
+            </ul>
+
+            <div id="ide"></div>
+        </section>
+        <section>
+            <h2>Elemek elérése 3</h2>
+            <p>
+                Írj JavaScript kódot, amely az ".ide" azonosítóval ellátott
+                elembe beletesz egy p taget, és a p tag tartalma "Jó
+                reggelt!"
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>
+                    Az első section elemelérése:
+                    <span>const ELEM=document.querySelectorAll(".ide")[0],
+                        <br />
+                        vagy const
+                        ELEM=document.getElementsByClassName("ide")
+                    </span>
+                    ld.:
+                    <a
+                        href="https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp">getElementsByClassName</a>
+                </li>
+
+                <li>Elem tartalmába írás: <span>ELEM.innerHTML </span></li>
+            </ul>
+
+            <div class="ide"></div>
+        </section>
+        <section>
+            <h2>Elemek elérése 4</h2>
+            <p>
+                Írj JavaScript kódot, amely a "lista" azonosítóval ellátott
+                elembe beletesz felsorolást a felsorolás tartalma 10 és 30
+                közötti véletlen számok legyenek, összesen 5 db!
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>
+                    Véletlen szám generálása:
+                    <span>
+                        Math.random() - [0,1) között generál számokat.
+                        <br />
+                        Math.floor() - levágja a tört részt.
+                    </span>
+                    ld.:
+                    <a href="https://www.w3schools.com/jsref/met_document_getelementbyid.asp">getElementByID</a><br />
+                </li>
+                <li>
+                    Érdemes egy szöveges változóban összeállítani a html
+                    kódot, majd azt írni bele a megfelelő elembe. <br />
+                    Tartalom összefűzése, ha változókat is használunk:
+                    <span> (alt+gr+7) `szöveg ${valtozonev} szöveg`</span>
+                </li>
+            </ul>
+
+            <div class="lista"></div>
+        </section>
+        <section>
+            <h2 id="ef1">Elemek formázása 1</h2>
+            <p>
+                Írj JavaScript kódot, amely az előző sectionban lévő "lista"
+                azonosítóval ellátott elemre ráteszi a css-ben már
+                elkészített "formazott" nevű stílust!
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>
+                    Stílus osztályt az
+                    <span> ELEM.classList.add() </span>
+                    függvény segítségével adhatunk egy elemhez.<br />
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2 id="e1">Eseménykezelés 1</h2>
+            <p>
+                Írj JavaScript kódot, amely az előző sectionban lévő "lista"
+                azonosítóval ellátott elemhez hozzáad egy eseménykezelőt! Az
+                elemre való kattintáskor az ebben a sectionban lévő
+                "kattintasutan" div-be kerüljön bele a lista div tartalma.
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>
+                    Eseménykezelő hozzáadása
+                    <span>
+                        <a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp">ELEM.addEventListener("esemeny",
+                            fvenynev).</a>
+                    </span>
+                </li>
+                <li>
+                    A lehetséges eseményekről itt tájékozódj:<a
+                        href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM events</a>
+                </li>
+            </ul>
+
+            <div class="kattintasutan"></div>
+        </section>
+        <section>
+            <h2>Eseménykezelés 2</h2>
+            <p>
+                Írj JavaScript kódot, amely az ebben a sectionban lévő
+                "feladat" azonosítóval ellátott elembe elhelyez egy gombot.
+                A gombra kattintva pedig ugyanabba a divbe a gomb mellé még
+                hozzáad egy újab divet, amiben egy kép van.
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ol>
+                <li>
+                    "Fogd meg" a feladat elemet. (ld.:<a href="#f1">1. feladat</a>
+                    )
+                </li>
+                <li>
+                    Az elembe írd bele a gombot: "&lt;button>OK&lt;/button>"
+                    (ld.:<a href="#f2">2. feladat</a> )
+                </li>
+                <li>
+                    "Fogd meg" a gomb elemet: (".feladat button") (ld.:<a href="#f1">1. feladat</a>
+                    )
+                </li>
+                <li>
+                    Adj a gomb elemhez eseménykezelőt (ld.:
+                    <a href="#e1">Eseménykezelés 1</a> ).
+                </li>
+                <li>
+                    Az eseménykezelő függvényében írd bele a a feladat
+                    elembe a divbe ágyazott képet tartalmazó html kódot.
+                    (ld.:<a href="#f2">2. feladat</a> )
+                </li>
+            </ol>
+
+            <div class="feladat"></div>
+        </section>
+        <section>
+            <h2>Eseménykezelés 3</h2>
+            <p>
+                Írj JavaScript kódot, amely az előző a sectionban lévő
+                "feladat" azonosítóval ellátott elemben lévő képre rátesz
+                egy eseménykezelőt. Ha a kép fölé visszük az egeret, akkor a
+                kép mérete változzon meg! Ha levisszük a képről az egeret,
+                akkor álljon vissza az eredeti méret.
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>Egymás után több eseménykezelőt is adhatsz egy elemhez. </li>
+
+                <li>
+                    A lehetséges eseményekről itt tájékozódj:<a
+                        href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM events</a>
+                </li>
+                <li>Az elemeket formázhatod előre elkészített css osztályokkal, ld.: <a href="#ef1">Elemek formázása 1
+                        feladat</a> </li>
+            </ul>
+
+
+
+
+        </section>
+        <section>
+            <h2>Eseménykezelés 4</h2>
+            <p>
+                Írj JavaScript kódot, amely az ebben a sectionban lévő
+                "tarolo" azonosítóval ellátott elemben lévő divekre rátesz
+                egy-egy eseménykezelőt. kattintásra az elem tartalmát írja bele az "eredmeny" divbe!
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li>Ha több elemre akarod rátenni ugyanazt az eseménykezelőt, akkor egy ciklussal be kell járnod az
+                    elemeket! </li>
+                <li>Az <span>event.target</span> utasítás adja vissza annak a eseményt kiváltó elemet. </li>
+
+            </ul>
+
+            <div class="tarolo">
+                <div class="elem">1</div>
+                <div class="elem">2</div>
+                <div class="elem">3</div>
+                <div class="elem">4</div>
+                <div class="elem">5</div>
+            </div>
+            <div class="megjelenito"></div>
+
+        </section>
+
+        <section>
+            <h2>Saját feladat 1</h2>
+            <p>
+                Írj ide egy tetszőlegees feladatot magadnak és a többieknek!
+            </p>
+            <p><span>Segítség a megoldáshoz:</span></p>
+            <ul>
+                <li></li>
+                <li></li>
+
+            </ul>
+
+            <div class="sajatdivem"></div>
+        </section>
+    </main>
+</body>
+
+</html>
